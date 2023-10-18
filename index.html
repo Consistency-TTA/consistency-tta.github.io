@@ -15,7 +15,7 @@
 
     <header>
         <h1>Accelerating Diffusion-Based Text-to-Audio<br>Generation with Consistency Distillation</h1>
-        <h3><a href="https://bai-yt.github.io" target=&ldquo;blank&rdquo;><u>Yatong Bai</u></a>, 
+        <h3><a class="title_link" href="https://bai-yt.github.io" target=&ldquo;blank&rdquo;><u>Yatong Bai</u></a>, 
             Trung Dang, Dung Tran, Kazuhito Koishida, Somayeh Sojoudi
         </h3>
 
@@ -49,6 +49,52 @@
             differentiable structure resulting from the distillation allows fine-tuning with novel loss functions.
             We use the CLAP loss as an example, confirming that end-to-end fine-tuning 
             further boosts the generation quality.
+        </p>
+    </section>
+
+    <section class="section">
+        <h2>Main Experiment Results</h2>
+        <p>
+            Our method reduce the computation of the core step of diffusion-based text-to-audio generation by 
+            a factor of 400, while observing minimal performance degradation in terms of 
+            Fréchet Audio Distance (FAD), Fréchet Distance (FD), KL Divergence, and CLAP Scores.
+        </p>
+        <table class="result-table">
+            <thead>
+                <tr class="result-row">
+                    <th class="result-head"></th>
+                    <th class="result-head">U-Net # params</th> <th class="result-head"># queries (↓)</th>
+                    <th class="result-head">CLAP fine-tuning</th> <th class="result-head">CFG w</th>
+                    <th class="result-head">CLAP<sub>T</sub> (↑)</th> <th class="result-head">CLAP<sub>A</sub> (↑)</th>
+                    <th class="result-head">FAD (↓)</th> <th class="result-head">FD (↓)</th>
+                    <th class="result-head">KLD (↓)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="result-row">
+                    <td class="result-data">Diffusion (Baseline)</td> <td class="result-data">557M</td>
+                    <td class="result-data">400</td> <td class="result-data">✗</td> <td class="result-data">3</td>
+                    <td class="result-data">24.57</td> <td class="result-data">72.79</td>
+                    <td class="result-data">1.908</td> <td class="result-data">19.57</td> <td class="result-data">1.350</td>
+                </tr>
+                <tr class="result-row">
+                    <td class="result-data">Consistency (Ours)</td> <td class="result-data">559M</td>
+                    <td class="result-data">1</td> <td class="result-data">✗</td> <td class="result-data">5</td>
+                    <td class="result-data">22.50</td> <td class="result-data">72.30</td>
+                    <td class="result-data">2.575</td> <td class="result-data">22.08</td> <td class="result-data">1.354</td>
+                </tr>
+                <tr class="result-row">
+                    <td class="result-data">Consistency w/ CLAP FT (Ours)</td> <td class="result-data">559M</td>
+                    <td class="result-data">1</td> <td class="result-data">✓</td> <td class="result-data">4</td>
+                    <td class="result-data">24.69</td> <td class="result-data">72.54</td>
+                    <td class="result-data">2.406</td> <td class="result-data">20.97</td> <td class="result-data">1.358</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            <a href="https://paperswithcode.com/sota/audio-generation-on-audiocaps" target=&ldquo;blank&rdquo;>This benchmark</a>
+            demonstrates how our single-step models stack up with previous methods,
+            most of which mostly require hundreds of generation steps.
         </p>
     </section>
 

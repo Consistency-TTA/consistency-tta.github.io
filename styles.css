@@ -40,14 +40,14 @@ header h3 {
     background-color: #fff;
 }
 
-a {
+.title_link {
     text-decoration: none;
     margin-left: 15px;  /* Add spacing between the two buttons */
     margin-right: 15px;  /* Add spacing between the two buttons */
     color: #ffffff;
 }
 
-a:hover {
+.title_link:hover {
     color: #d0d0d0;
 	border-bottom: 3px #c0c0c0;
 }
@@ -157,12 +157,57 @@ td {
     padding-left: 16px;
     text-align: left;
     vertical-align: middle;
+}
+
+.demo-data {
     border-right: 5px solid #eeeeee; /* Add border to the right side of each cell */
 }
 
 /* Remove the right border from the last cell of each row */
 tr td:last-child {
     border-right: none;
+}
+
+/* Base table styles */
+.result-table {
+    max-width: 860px;
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    margin: auto;
+    margin: 20px auto;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Header styles */
+.result-head {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    font-weight: bold;
+    text-align: left;
+    padding: 5px 12px;
+}
+
+/* Row & data styles */
+.result-row:nth-of-type(odd) {
+    background-color: #f7f9fc;
+}
+
+.result-row:hover {
+    background-color: #e0e7ee;
+    cursor: pointer;
+}
+
+.result-data {
+    padding: 5px 12px;
+    border-bottom: 1px solid #e7ebef;
+}
+
+/* Optional: Add transitions for smoother hover effects */
+.result-row,
+.result-data {
+    transition: background-color 0.2s;
 }
 
 audio.scaled {
