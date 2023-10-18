@@ -1,0 +1,196 @@
+@import url(
+	'https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap'
+);
+@import url(
+    'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css'
+);
+
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    background-color: #264653;  /* Deep Blue */
+    color: #fff;
+    text-align: center;
+    padding: 2.4rem 0;
+}
+
+header h3 {
+    font-weight: 300;
+    font-size: 1.2em;
+    margin-top: 0.8em;
+}
+
+.section {
+    font-weight: 400;
+    max-width: 850px;
+    margin: 20px auto;
+    padding: 20px;
+    padding-top: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+a {
+    text-decoration: none;
+    margin-left: 15px;  /* Add spacing between the two buttons */
+    margin-right: 15px;  /* Add spacing between the two buttons */
+    color: #ffffff;
+}
+
+a:hover {
+    color: #d0d0d0;
+	border-bottom: 3px #c0c0c0;
+}
+
+a:last-child {
+    margin-right: 0;
+}
+
+a[href^="mailto:"] {
+    /* styles for email links */
+    color: #264653;
+    text-decoration: underline;
+    margin-left: 0px;
+}
+
+button {
+    font-family: 'Lato', sans-serif;
+    color: #fff;
+    border: none;
+    padding: 12px 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1.2em;
+    width: 220px;
+    border-radius: 4px;  /* Rounded button edges */
+}
+
+.eval_rating_button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 8px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: auto
+}
+
+.clicked {
+    background-color: #008CBA;
+}
+
+.home-button {
+    background-color: #597a47;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.demo-button {
+    background-color: #7a5947;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.paper-button {
+    background-color: #1db6c7;
+    font-weight: bold;
+    text-shadow: 3px 3px 1.5px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.eval-button {
+    background-color: #5d5d5d;
+}
+
+.eval-button-small {
+    background-color: #5d5d5d;
+    font-size: 1em;
+    width: 160px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    padding: 8px 5px;
+}
+
+button:hover {
+    opacity: 0.75  /* A generic hover effect for all buttons */
+}
+
+footer {
+    background-color: #264653;  /* Dark Desaturated Blue */
+    color: #e9e9e9;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 40px;
+}
+
+table {
+    width: 100%;
+    max-width: 600px; /* Adjusted for vertical layout */
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 2px;
+    padding-left: 16px;
+    text-align: left;
+    vertical-align: middle;
+    border-right: 5px solid #eeeeee; /* Add border to the right side of each cell */
+}
+
+/* Remove the right border from the last cell of each row */
+tr td:last-child {
+    border-right: none;
+}
+
+audio.scaled {
+    height: 36px; /* Adjust this value as needed */
+}
+
+.bibtex {
+    font-family: "Courier New", monospace;
+    background-color: #f4f4f4;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;    /* makes the area look clickable */
+    overflow: hidden;   /* Ensures the copy icon is contained within the div */
+}
+
+.bibtex pre {
+    margin: 0;  /* Removes default margin from <pre> */
+    font-family: inherit;  /* Ensures font consistency */
+    font-size: .9em;
+    white-space: pre-wrap;       /* CSS3 */
+    white-space: -moz-pre-wrap;  /* Firefox */
+    white-space: -pre-wrap;      /* Opera <7 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* IE */
+}
+
+.copy-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 20px;  /* or adjust as needed */
+    color: #000;  /* Color of the icon */
+    background-color: transparent;  /* No fill */
+}
+
+.bibtex:hover {
+    background-color: #e8e8e8;  /* subtle hover effect */
+}
+
+.bibtex:hover .copy-icon {
+    color: #007BFF;  /* Change color on hover for better user feedback */
+}

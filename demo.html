@@ -1,0 +1,1744 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Consistency TTA Demo Page</title>
+</head>
+
+<body>
+    <header>
+        <h1>Demo Page</h1>
+        <h3><b>Accelerating Diffusion-Based Text-to-Audio Generation with Consistency Distillation<br></b>
+            <a href="https://bai-yt.github.io" target=&ldquo;blank&rdquo;><u>Yatong Bai</u></a>, 
+            Trung Dang, Dung Tran, Kazuhito Koishida, Somayeh Sojoudi
+        </h3>
+
+        <div style="height:13px;"></div>
+
+        <a href="index.html"><button class="home-button">Project home</button></a>
+        <a href="https://arxiv.org/abs/2309.10740">
+          <button class="paper-button">Preprint paper</button>
+        </a>
+        <a href="evaluation.html"><button class="eval-button">Sample evaluation form</button></a>
+
+        <div style="height:7px;"></div>
+    </header>
+
+    <section class="section">
+        <p>This demonstration page presents the generations from 50 randomly selected prompts from the AudioCaps test set.</p>
+        <p>We present four audio sources: the consistency model fine-tuned with CLAP, 
+            the consistency model without CLAP-fine-tuning, the diffusion baseline model, and the ground truth.</p>
+        <p><b>The diffusion baseline queries the neural network 400 times per audio clip, 
+            while the consistency models query a same-sized network only one time.</b></p>
+
+        <hr>
+        <h3>Prompt 0</h3>
+        <h4>Whistling followed by a child giggling and then Moe whistling.</h4>
+        <table>
+            <tr>
+                <td>Consistency model</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/0_Consistency model.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td>Consistency model + CLAP-FT</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/0_Consistency model + CLAP-FT.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Diffusion baseline (TANGO)</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/0_Diffusion baseline (TANGO).wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Ground truth</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/0_Ground truth.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 1</h3>
+        <h4>Some clanking and banging and a man speaking.</h4>
+        <table>
+            <tr>
+                <td>Consistency model</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/1_Consistency model.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td>Consistency model + CLAP-FT</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/1_Consistency model + CLAP-FT.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Diffusion baseline (TANGO)</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/1_Diffusion baseline (TANGO).wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Ground truth</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/1_Ground truth.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 2</h3>
+        <h4>A man speaking on a microphone as a crowd of people laugh followed by dinner plates clacking.</h4>
+        <table>
+            <tr>
+                <td>Consistency model</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/2_Consistency model.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td>Consistency model + CLAP-FT</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/2_Consistency model + CLAP-FT.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Diffusion baseline (TANGO)</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/2_Diffusion baseline (TANGO).wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Ground truth</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/2_Ground truth.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 3</h3>
+        <h4>Steam hissing followed by a train whistle blowing and a group of people talking in the background.</h4>
+        <table>
+            <tr>
+                <td>Consistency model</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/3_Consistency model.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td>Consistency model + CLAP-FT</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/3_Consistency model + CLAP-FT.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Diffusion baseline (TANGO)</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/3_Diffusion baseline (TANGO).wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Ground truth</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/3_Ground truth.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 4</h3>
+        <h4>A vehicle revving and accelerating as tires skid and squeak on a road.</h4>
+        <table>
+            <tr>
+                <td>Consistency model</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/4_Consistency model.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td>Consistency model + CLAP-FT</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/4_Consistency model + CLAP-FT.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Diffusion baseline (TANGO)</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/4_Diffusion baseline (TANGO).wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Ground truth</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/4_Ground truth.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 5</h3>
+        <h4>Steam escapes with a hissing noise.</h4>
+        <table>
+            <tr>
+                <td>Consistency model</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/5_Consistency model.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td>Consistency model + CLAP-FT</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/5_Consistency model + CLAP-FT.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Diffusion baseline (TANGO)</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/5_Diffusion baseline (TANGO).wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Ground truth</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/5_Ground truth.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 6</h3>
+        <h4>A man speaking continuously.</h4>
+        <table>
+            <tr>
+                <td>Consistency model</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/6_Consistency model.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td>Consistency model + CLAP-FT</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/6_Consistency model + CLAP-FT.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Diffusion baseline (TANGO)</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/6_Diffusion baseline (TANGO).wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Ground truth</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/6_Ground truth.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 7</h3>
+        <h4>Knocking sounds as race cars pass by.</h4>
+        <table>
+            <tr>
+                <td>Consistency model</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/7_Consistency model.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td>Consistency model + CLAP-FT</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/7_Consistency model + CLAP-FT.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Diffusion baseline (TANGO)</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/7_Diffusion baseline (TANGO).wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Ground truth</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/7_Ground truth.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 8</h3>
+        <h4>A man talking followed by plastic clacking then a power tool drilling.</h4>
+        <table>
+            <tr>
+                <td>Consistency model</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/8_Consistency model.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td>Consistency model + CLAP-FT</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/8_Consistency model + CLAP-FT.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Diffusion baseline (TANGO)</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/8_Diffusion baseline (TANGO).wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Ground truth</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/8_Ground truth.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 9</h3>
+        <h4>Humming of an engine with a woman speaking over a loudspeaker.</h4>
+        <table>
+            <tr>
+                <td>Consistency model</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/9_Consistency model.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td>Consistency model + CLAP-FT</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/9_Consistency model + CLAP-FT.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Diffusion baseline (TANGO)</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/9_Diffusion baseline (TANGO).wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Ground truth</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/9_Ground truth.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 10</h3>
+        <h4>A telephone ringing with loud echo.</h4>
+        <table>
+            <tr>
+                <td>Consistency model</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/10_Consistency model.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td>Consistency model + CLAP-FT</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/10_Consistency model + CLAP-FT.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Diffusion baseline (TANGO)</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/10_Diffusion baseline (TANGO).wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Ground truth</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/10_Ground truth.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 11</h3>
+        <h4>Released air hissing followed by a popping explosion then a metal ding persists as a person is laughing and a man is talking..</h4>
+        <table>
+            <tr>
+                <td>Consistency model</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/11_Consistency model.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td>Consistency model + CLAP-FT</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/11_Consistency model + CLAP-FT.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Diffusion baseline (TANGO)</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/11_Diffusion baseline (TANGO).wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Ground truth</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/11_Ground truth.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 12</h3>
+        <h4>Constant hissing with mean having conversation.</h4>
+        <table>
+            <tr>
+                <td>Consistency model</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/12_Consistency model.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td>Consistency model + CLAP-FT</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/12_Consistency model + CLAP-FT.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Diffusion baseline (TANGO)</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/12_Diffusion baseline (TANGO).wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Ground truth</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/12_Ground truth.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 13</h3>
+        <h4>A missile launching followed by an explosion and metal screeching as a motor hums in the background..</h4>
+        <table>
+            <tr>
+                <td>Consistency model</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/13_Consistency model.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td>Consistency model + CLAP-FT</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/13_Consistency model + CLAP-FT.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Diffusion baseline (TANGO)</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/13_Diffusion baseline (TANGO).wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Ground truth</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/13_Ground truth.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 14</h3>
+        <h4>An adult female speaks as a cat meows three times, and an electronic device plays in the background.</h4>
+        <table>
+            <tr>
+                <td>Consistency model</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/14_Consistency model.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td>Consistency model + CLAP-FT</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/14_Consistency model + CLAP-FT.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Diffusion baseline (TANGO)</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/14_Diffusion baseline (TANGO).wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Ground truth</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/14_Ground truth.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 15</h3>
+        <h4>Food and oil sizzling.</h4>
+        <table>
+            <tr>
+                <td>Consistency model</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/15_Consistency model.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td>Consistency model + CLAP-FT</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/15_Consistency model + CLAP-FT.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Diffusion baseline (TANGO)</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/15_Diffusion baseline (TANGO).wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Ground truth</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/15_Ground truth.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 16</h3>
+        <h4>Some light tapping on a computer keyboard and a baby crying.</h4>
+        <table>
+            <tr>
+                <td>Consistency model</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/16_Consistency model.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td>Consistency model + CLAP-FT</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/16_Consistency model + CLAP-FT.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Diffusion baseline (TANGO)</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/16_Diffusion baseline (TANGO).wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Ground truth</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/16_Ground truth.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 17</h3>
+        <h4>An electronic beep followed by a man talking.</h4>
+        <table>
+            <tr>
+                <td>Consistency model</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/17_Consistency model.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td>Consistency model + CLAP-FT</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/17_Consistency model + CLAP-FT.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Diffusion baseline (TANGO)</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/17_Diffusion baseline (TANGO).wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Ground truth</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/17_Ground truth.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 18</h3>
+        <h4>Sanding and filing then a man speaks.</h4>
+        <table>
+            <tr>
+                <td>Consistency model</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/18_Consistency model.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td>Consistency model + CLAP-FT</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/18_Consistency model + CLAP-FT.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Diffusion baseline (TANGO)</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/18_Diffusion baseline (TANGO).wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Ground truth</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/18_Ground truth.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 19</h3>
+        <h4>An aircraft engine humming followed by plastic clanking then an aircraft engine slowing down.</h4>
+        <table>
+            <tr>
+                <td>Consistency model</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/19_Consistency model.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td>Consistency model + CLAP-FT</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/19_Consistency model + CLAP-FT.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Diffusion baseline (TANGO)</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/19_Diffusion baseline (TANGO).wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Ground truth</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/19_Ground truth.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 20</h3>
+        <h4>Footsteps and scuffing occur, after which a door grinds, squeaks and clicks, an adult male speaks, and the door grinds, squeaks and clicks shut with a thump.</h4>
+        <table>
+            <tr>
+                <td>Consistency model</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/20_Consistency model.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td>Consistency model + CLAP-FT</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/20_Consistency model + CLAP-FT.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Diffusion baseline (TANGO)</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/20_Diffusion baseline (TANGO).wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Ground truth</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/20_Ground truth.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 21</h3>
+        <h4>A train horn blowing multiple times as a train runs on railroad tracks while a man and a young kid talk in the background alongside birds cooing in the distance.</h4>
+        <table>
+            <tr>
+                <td>Consistency model</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/21_Consistency model.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td>Consistency model + CLAP-FT</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/21_Consistency model + CLAP-FT.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Diffusion baseline (TANGO)</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/21_Diffusion baseline (TANGO).wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Ground truth</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/21_Ground truth.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 22</h3>
+        <h4>Strong gusts of wind are followed by cheers and shouts from several people plus the chatter of girl.</h4>
+        <table>
+            <tr>
+                <td>Consistency model</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/22_Consistency model.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td>Consistency model + CLAP-FT</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/22_Consistency model + CLAP-FT.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Diffusion baseline (TANGO)</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/22_Diffusion baseline (TANGO).wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Ground truth</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/22_Ground truth.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 23</h3>
+        <h4>Compressed air and steam releasing with a man faintly talking in the background.</h4>
+        <table>
+            <tr>
+                <td>Consistency model</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/23_Consistency model.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td>Consistency model + CLAP-FT</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/23_Consistency model + CLAP-FT.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Diffusion baseline (TANGO)</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/23_Diffusion baseline (TANGO).wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Ground truth</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/23_Ground truth.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 24</h3>
+        <h4>A man talking followed by a goat baaing then a metal gate sliding shut as ducks quack and wind blows into a microphone.</h4>
+        <table>
+            <tr>
+                <td>Consistency model</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/24_Consistency model.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td>Consistency model + CLAP-FT</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/24_Consistency model + CLAP-FT.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Diffusion baseline (TANGO)</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/24_Diffusion baseline (TANGO).wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Ground truth</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/24_Ground truth.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 25</h3>
+        <h4>A cat is meowing.</h4>
+        <table>
+            <tr>
+                <td>Consistency model</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/25_Consistency model.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td>Consistency model + CLAP-FT</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/25_Consistency model + CLAP-FT.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Diffusion baseline (TANGO)</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/25_Diffusion baseline (TANGO).wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Ground truth</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/25_Ground truth.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 26</h3>
+        <h4>A toilet is flushing followed by a cat meowing.</h4>
+        <table>
+            <tr>
+                <td>Consistency model</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/26_Consistency model.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td>Consistency model + CLAP-FT</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/26_Consistency model + CLAP-FT.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Diffusion baseline (TANGO)</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/26_Diffusion baseline (TANGO).wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Ground truth</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/26_Ground truth.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 27</h3>
+        <h4>A person speaks with distant humming and nearby clinking.</h4>
+        <table>
+            <tr>
+                <td>Consistency model</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/27_Consistency model.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td>Consistency model + CLAP-FT</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/27_Consistency model + CLAP-FT.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Diffusion baseline (TANGO)</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/27_Diffusion baseline (TANGO).wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Ground truth</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/27_Ground truth.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 28</h3>
+        <h4>A dog whimpering followed by laughing and barking..</h4>
+        <table>
+            <tr>
+                <td>Consistency model</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/28_Consistency model.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td>Consistency model + CLAP-FT</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/28_Consistency model + CLAP-FT.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Diffusion baseline (TANGO)</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/28_Diffusion baseline (TANGO).wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Ground truth</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/28_Ground truth.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 29</h3>
+        <h4>A vehicle driving by with tires briefly skidding and accelerating then slowing down.</h4>
+        <table>
+            <tr>
+                <td>Consistency model</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/29_Consistency model.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td>Consistency model + CLAP-FT</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/29_Consistency model + CLAP-FT.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Diffusion baseline (TANGO)</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/29_Diffusion baseline (TANGO).wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Ground truth</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/29_Ground truth.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 30</h3>
+        <h4>A horn and then an engine revving.</h4>
+        <table>
+            <tr>
+                <td>Consistency model</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/30_Consistency model.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td>Consistency model + CLAP-FT</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/30_Consistency model + CLAP-FT.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Diffusion baseline (TANGO)</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/30_Diffusion baseline (TANGO).wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Ground truth</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/30_Ground truth.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 31</h3>
+        <h4>Several people cheer and scream and speak as water flows hard.</h4>
+        <table>
+            <tr>
+                <td>Consistency model</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/31_Consistency model.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td>Consistency model + CLAP-FT</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/31_Consistency model + CLAP-FT.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Diffusion baseline (TANGO)</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/31_Diffusion baseline (TANGO).wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Ground truth</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/31_Ground truth.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 32</h3>
+        <h4>A person whistles to music.</h4>
+        <table>
+            <tr>
+                <td>Consistency model</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/32_Consistency model.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td>Consistency model + CLAP-FT</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/32_Consistency model + CLAP-FT.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Diffusion baseline (TANGO)</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/32_Diffusion baseline (TANGO).wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Ground truth</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/32_Ground truth.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 33</h3>
+        <h4>Laughing and speech in a slowed speed.</h4>
+        <table>
+            <tr>
+                <td>Consistency model</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/33_Consistency model.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td>Consistency model + CLAP-FT</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/33_Consistency model + CLAP-FT.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Diffusion baseline (TANGO)</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/33_Diffusion baseline (TANGO).wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Ground truth</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/33_Ground truth.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 34</h3>
+        <h4>A man speaking as insects are buzzing and wind is blowing into a microphone.</h4>
+        <table>
+            <tr>
+                <td>Consistency model</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/34_Consistency model.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td>Consistency model + CLAP-FT</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/34_Consistency model + CLAP-FT.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Diffusion baseline (TANGO)</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/34_Diffusion baseline (TANGO).wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Ground truth</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/34_Ground truth.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 35</h3>
+        <h4>Wind followed by splashing of water.</h4>
+        <table>
+            <tr>
+                <td>Consistency model</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/35_Consistency model.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td>Consistency model + CLAP-FT</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/35_Consistency model + CLAP-FT.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Diffusion baseline (TANGO)</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/35_Diffusion baseline (TANGO).wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Ground truth</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/35_Ground truth.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 36</h3>
+        <h4>A person whistling.</h4>
+        <table>
+            <tr>
+                <td>Consistency model</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/36_Consistency model.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td>Consistency model + CLAP-FT</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/36_Consistency model + CLAP-FT.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Diffusion baseline (TANGO)</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/36_Diffusion baseline (TANGO).wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Ground truth</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/36_Ground truth.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 37</h3>
+        <h4>Wood being scraped along with mechanical sounds.</h4>
+        <table>
+            <tr>
+                <td>Consistency model</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/37_Consistency model.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td>Consistency model + CLAP-FT</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/37_Consistency model + CLAP-FT.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Diffusion baseline (TANGO)</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/37_Diffusion baseline (TANGO).wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Ground truth</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/37_Ground truth.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 38</h3>
+        <h4>A woman speeches.</h4>
+        <table>
+            <tr>
+                <td>Consistency model</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/38_Consistency model.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td>Consistency model + CLAP-FT</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/38_Consistency model + CLAP-FT.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Diffusion baseline (TANGO)</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/38_Diffusion baseline (TANGO).wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Ground truth</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/38_Ground truth.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 39</h3>
+        <h4>A cat is meowing in a quiet environment.</h4>
+        <table>
+            <tr>
+                <td>Consistency model</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/39_Consistency model.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td>Consistency model + CLAP-FT</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/39_Consistency model + CLAP-FT.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Diffusion baseline (TANGO)</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/39_Diffusion baseline (TANGO).wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Ground truth</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/39_Ground truth.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 40</h3>
+        <h4>Wind blowing and a siren rings.</h4>
+        <table>
+            <tr>
+                <td>Consistency model</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/40_Consistency model.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td>Consistency model + CLAP-FT</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/40_Consistency model + CLAP-FT.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Diffusion baseline (TANGO)</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/40_Diffusion baseline (TANGO).wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Ground truth</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/40_Ground truth.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 41</h3>
+        <h4>Static and beeping.</h4>
+        <table>
+            <tr>
+                <td>Consistency model</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/41_Consistency model.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td>Consistency model + CLAP-FT</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/41_Consistency model + CLAP-FT.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Diffusion baseline (TANGO)</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/41_Diffusion baseline (TANGO).wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Ground truth</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/41_Ground truth.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 42</h3>
+        <h4>Musical whistling with wind blowing.</h4>
+        <table>
+            <tr>
+                <td>Consistency model</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/42_Consistency model.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td>Consistency model + CLAP-FT</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/42_Consistency model + CLAP-FT.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Diffusion baseline (TANGO)</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/42_Diffusion baseline (TANGO).wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Ground truth</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/42_Ground truth.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 43</h3>
+        <h4>An idle motorbike engine running.</h4>
+        <table>
+            <tr>
+                <td>Consistency model</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/43_Consistency model.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td>Consistency model + CLAP-FT</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/43_Consistency model + CLAP-FT.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Diffusion baseline (TANGO)</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/43_Diffusion baseline (TANGO).wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Ground truth</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/43_Ground truth.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 44</h3>
+        <h4>A jackhammer drilling and vibrating continuously.</h4>
+        <table>
+            <tr>
+                <td>Consistency model</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/44_Consistency model.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td>Consistency model + CLAP-FT</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/44_Consistency model + CLAP-FT.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Diffusion baseline (TANGO)</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/44_Diffusion baseline (TANGO).wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Ground truth</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/44_Ground truth.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 45</h3>
+        <h4>A train is passing by and sound its whistle..</h4>
+        <table>
+            <tr>
+                <td>Consistency model</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/45_Consistency model.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td>Consistency model + CLAP-FT</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/45_Consistency model + CLAP-FT.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Diffusion baseline (TANGO)</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/45_Diffusion baseline (TANGO).wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Ground truth</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/45_Ground truth.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 46</h3>
+        <h4>A motorboat engine running as water splashes and a man shouts followed by birds chirping in the background.</h4>
+        <table>
+            <tr>
+                <td>Consistency model</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/46_Consistency model.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td>Consistency model + CLAP-FT</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/46_Consistency model + CLAP-FT.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Diffusion baseline (TANGO)</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/46_Diffusion baseline (TANGO).wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Ground truth</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/46_Ground truth.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 47</h3>
+        <h4>A high frequency motor hums loudly and splashes water.</h4>
+        <table>
+            <tr>
+                <td>Consistency model</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/47_Consistency model.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td>Consistency model + CLAP-FT</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/47_Consistency model + CLAP-FT.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Diffusion baseline (TANGO)</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/47_Diffusion baseline (TANGO).wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Ground truth</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/47_Ground truth.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 48</h3>
+        <h4>A series of sharp, squeaky snoring noises.</h4>
+        <table>
+            <tr>
+                <td>Consistency model</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/48_Consistency model.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td>Consistency model + CLAP-FT</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/48_Consistency model + CLAP-FT.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Diffusion baseline (TANGO)</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/48_Diffusion baseline (TANGO).wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Ground truth</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/48_Ground truth.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 49</h3>
+        <h4>A bus horn honking as wind is blowing into a microphone before a bus drives by.</h4>
+        <table>
+            <tr>
+                <td>Consistency model</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/49_Consistency model.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td>Consistency model + CLAP-FT</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/49_Consistency model + CLAP-FT.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Diffusion baseline (TANGO)</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/49_Diffusion baseline (TANGO).wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td style="color: #a0a0a0">Ground truth</td>
+                <td><audio class="scaled" controls preload="none">
+                    <source src="demo_audio/49_Ground truth.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+    </section>
+
+    <footer>
+        <p>&copy; Microsoft and UC Berkeley. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
