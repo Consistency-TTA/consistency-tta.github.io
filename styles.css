@@ -4,6 +4,10 @@
 @import url(
     'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css'
 );
+@import url(
+    'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css'
+);
+
 
 body {
     font-family: 'Lato', sans-serif;
@@ -122,6 +126,16 @@ button {
 button:hover {
     opacity: 0.75  /* A generic hover effect for all buttons */
 }
+
+a .fab.fa-github {
+    color: #FEFEFE; /* or any color you prefer */
+    vertical-align: bottom;
+    font-size: 48px; /* adjust size as needed */
+}
+a:hover .fab.fa-github {
+    color: #5a86c0; /* color on hover */
+}
+
 
 footer {
     background-color: #264653;  /* Dark Desaturated Blue */
