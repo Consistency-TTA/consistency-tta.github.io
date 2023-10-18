@@ -96,11 +96,19 @@ button {
 .home-button {
     background-color: #597a47;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin: 0px 13px;
 }
 
 .demo-button {
     background-color: #7a5947;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin: 0px 13px;
+}
+
+.eval-button {
+    background-color: #5d5d5d;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin: 0px 13px;
 }
 
 .paper-button {
@@ -108,10 +116,14 @@ button {
     font-weight: bold;
     text-shadow: 3px 3px 1.5px rgba(0, 0, 0, 0.15);
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin: 0px 13px;
 }
 
-.eval-button {
-    background-color: #5d5d5d;
+a .fab.fa-github {
+    color: #FEFEFE; /* or any color you prefer */
+    vertical-align: bottom;
+    font-size: 48px; /* adjust size as needed */
+    margin: 0px 7px;
 }
 
 .eval-button-small {
@@ -127,15 +139,9 @@ button:hover {
     opacity: 0.75  /* A generic hover effect for all buttons */
 }
 
-a .fab.fa-github {
-    color: #FEFEFE; /* or any color you prefer */
-    vertical-align: bottom;
-    font-size: 48px; /* adjust size as needed */
-}
 a:hover .fab.fa-github {
     color: #5a86c0; /* color on hover */
 }
-
 
 footer {
     background-color: #264653;  /* Dark Desaturated Blue */
