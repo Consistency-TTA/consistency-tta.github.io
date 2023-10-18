@@ -62,31 +62,26 @@
         <table class="result-table">
             <thead>
                 <tr class="result-row">
-                    <th class="result-head"></th> <th class="result-head">U-Net # params</th>
-                    <th class="result-head"># queries (↓)</th> <th class="result-head">CFG w</th>
+                    <th class="result-head"></th> <th class="result-head"># queries (↓)</th>
                     <th class="result-head">CLAP<sub>T</sub> (↑)</th> <th class="result-head">CLAP<sub>A</sub> (↑)</th>
-                    <th class="result-head">FAD (↓)</th> <th class="result-head">FD (↓)</th>
-                    <th class="result-head">KLD (↓)</th>
+                    <th class="result-head">FAD (↓)</th> <th class="result-head">FD (↓)</th> <th class="result-head">KLD (↓)</th>
                 </tr>
             </thead>
             <tbody>
-                <tr class="result-row">
-                    <td class="result-data">Diffusion (Baseline)</td> <td class="result-data">557M</td>
-                    <td class="result-data">400</td> <td class="result-data">3</td>
+                <tr class="result-row" style="color: #a0a0a0">
+                    <td class="result-data">Diffusion (Baseline)</td> <td class="result-data">400</td>
                     <td class="result-data">24.57</td> <td class="result-data">72.79</td>
                     <td class="result-data">1.908</td> <td class="result-data">19.57</td> <td class="result-data">1.350</td>
                 </tr>
                 <tr class="result-row">
-                    <td class="result-data">Consistency (Ours)</td> <td class="result-data">559M</td>
-                    <td class="result-data">1</td> <td class="result-data">5</td>
-                    <td class="result-data">22.50</td> <td class="result-data">72.30</td>
-                    <td class="result-data">2.575</td> <td class="result-data">22.08</td> <td class="result-data">1.354</td>
-                </tr>
-                <tr class="result-row">
-                    <td class="result-data">Consistency w/ CLAP FT (Ours)</td> <td class="result-data">559M</td>
-                    <td class="result-data">1</td> <td class="result-data">4</td>
+                    <td class="result-data">Consistency + CLAP FT (Ours)</td> <td class="result-data">1</td>
                     <td class="result-data">24.69</td> <td class="result-data">72.54</td>
                     <td class="result-data">2.406</td> <td class="result-data">20.97</td> <td class="result-data">1.358</td>
+                </tr>
+                <tr class="result-row">
+                    <td class="result-data">Consistency (Ours)</td> <td class="result-data">1</td>
+                    <td class="result-data">22.50</td> <td class="result-data">72.30</td>
+                    <td class="result-data">2.575</td> <td class="result-data">22.08</td> <td class="result-data">1.354</td>
                 </tr>
             </tbody>
         </table>
