@@ -4,7 +4,19 @@ This is the official website for the paper [*Accelerating Diffusion-Based Text-t
 
 The webpage includes a [demo page](https://consistency_tta.github.io/demo.html) and [an example of the human evaluation form](https://consistency_tta.github.io/evaluation.html).
 
-#### Citing our work (BibTeX)
+
+### Main experiment result
+
+Our method reduce the computation of the core step of diffusion-based text-to-audio generation by a factor of 400, while observing minimal performance degradation in terms of Fréchet Audio Distance (FAD), Fréchet Distance (FD), KL Divergence, and CLAP Scores.
+
+|                        | U-Net # params | # queries (↓) | CLAP<sub>T</sub> (↑) | CLAP<sub>A</sub> (↑) | FAD (↓) | FD (↓) | KLD (↓) |
+|------------------------|----------------|---------------|----------------------|----------------------|---------|--------|---------|
+| Diffusion (Baseline)   | 557M           | 400           | 24.57                | 72.79                | 1.908   | 19.57  | 1.350   |
+| Consistency            | 559M           | 1             | 22.50                | 72.30                | 2.575   | 22.08  | 1.354   |
+| Consistency w/ CLAP FT | 559M           | 1             | 24.69                | 72.54                | 2.406   | 20.97  | 1.358   |
+
+
+### Cite our work (BibTeX)
 
 ```bibtex
 @article{bai2023accelerating,
