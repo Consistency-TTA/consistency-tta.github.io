@@ -170,12 +170,12 @@ tr td:last-child {
 
 /* Base table styles */
 .result-table {
-    max-width: 860px;
+    max-width: 840px;
     width: 100%;
     border-collapse: collapse;
     font-family: Arial, sans-serif;
     margin: auto;
-    margin: 20px auto;
+    margin: 12px auto;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     overflow: hidden;
 }
@@ -186,7 +186,7 @@ tr td:last-child {
     color: #ecf0f1;
     font-weight: bold;
     text-align: left;
-    padding: 5px 12px;
+    padding: 7px 12px;
 }
 
 /* Row & data styles */
@@ -200,7 +200,7 @@ tr td:last-child {
 }
 
 .result-data {
-    padding: 5px 12px;
+    padding: 6px 12px;
     border-bottom: 1px solid #e7ebef;
 }
 
