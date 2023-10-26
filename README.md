@@ -4,6 +4,8 @@ This is the [official website](https://consistency-tta.github.io) for the paper 
 
 The webpage includes a [demo page](https://consistency-tta.github.io/demo.html) and an example [human evaluation form](https://consistency-tta.github.io/evaluation.html).
 
+The training and inference code will be added soon.
+
 
 ### Main experiment result
 

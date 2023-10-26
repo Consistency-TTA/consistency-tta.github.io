@@ -27,7 +27,15 @@ header {
 header h3 {
     font-weight: 300;
     font-size: 1.2em;
+    padding-top: 0.25em;
     margin-top: 0.8em;
+}
+
+.institution {
+    font-weight: 200;
+    font-size: 1em;
+    font-style: italic;
+    margin-top: -.4em;
 }
 
 .section {
