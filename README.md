@@ -7,7 +7,7 @@ The webpage includes a [demo page](https://consistency-tta.github.io/demo.html) 
 The training and inference code will be added soon.
 
 
-### Main experiment result
+### Main Experiment results
 
 Our method reduce the computation of the core step of diffusion-based text-to-audio generation by a factor of 400, while observing minimal performance degradation in terms of Fréchet Audio Distance (FAD), Fréchet Distance (FD), KL Divergence, and CLAP Scores.
 
@@ -20,7 +20,7 @@ Our method reduce the computation of the core step of diffusion-based text-to-au
 [This benchmark](https://paperswithcode.com/sota/audio-generation-on-audiocaps) demonstrates how our single-step models stack up with previous methods, most of which mostly require hundreds of generation steps.
 
 
-### Cite our work (BibTeX)
+### Cite Our Work (BibTeX)
 
 ```bibtex
 @article{bai2023accelerating,
