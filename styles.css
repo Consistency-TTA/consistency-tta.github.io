@@ -105,12 +105,14 @@ button {
     background-color: #597a47;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     margin: 0px 13px;
+    width: 180px;
 }
 
 .demo-button {
     background-color: #7a5947;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     margin: 0px 13px;
+    width: 180px;
 }
 
 .eval-button {
@@ -125,12 +127,22 @@ button {
     text-shadow: 3px 3px 1.5px rgba(0, 0, 0, 0.15);
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     margin: 0px 13px;
+    width: 180px;
+}
+
+.code-button {
+    background-color: #df801d;
+    font-weight: bold;
+    text-shadow: 3px 3px 1.5px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin: 0px 13px;
+    width: 160px;
 }
 
 a .fab.fa-github {
     color: #FEFEFE; /* or any color you prefer */
     vertical-align: bottom;
-    font-size: 48px; /* adjust size as needed */
+    font-size: 24px; /* adjust size as needed */
     margin: 0px 7px;
 }
 
@@ -148,7 +160,7 @@ button:hover {
 }
 
 a:hover .fab.fa-github {
-    color: #5a86c0; /* color on hover */
+    color: #ffb987; /* color on hover */
 }
 
 footer {
