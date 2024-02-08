@@ -50,8 +50,8 @@ header h3 {
 
 .title_link {
     text-decoration: none;
-    margin-left: 15px;  /* Add spacing between the two buttons */
-    margin-right: 15px;  /* Add spacing between the two buttons */
+    margin-left: 10px;  /* Add spacing between the two buttons */
+    margin-right: 5px;  /* Add spacing between the two buttons */
     color: #ffffff;
 }
 
@@ -115,6 +115,13 @@ button {
     width: 180px;
 }
 
+.hf-button {
+    background-color: #c1436d;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin: 0px 13px;
+    width: 200px;
+}
+
 .eval-button {
     background-color: #5d5d5d;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
@@ -173,7 +180,7 @@ footer {
 
 table {
     width: 100%;
-    max-width: 600px; /* Adjusted for vertical layout */
+    max-width: 630px; /* Adjusted for vertical layout */
     margin: 0 auto;
     border-collapse: collapse;
 }

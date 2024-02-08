@@ -17,8 +17,11 @@
         <h1>Accelerating Diffusion-Based Text-to-Audio<br>Generation with Consistency Distillation</h1>
 
         <h3 style="font-weight: 400;">
-            <a class="title_link" href="https://bai-yt.github.io" target=&ldquo;blank&rdquo;><u>Yatong Bai</u></a>, 
-            Trung Dang, Dung Tran, Kazuhito Koishida, Somayeh Sojoudi
+            <a class="title_link" href="https://bai-yt.github.io" target=&ldquo;blank&rdquo;><u>Yatong Bai</u></a>,
+            <a class="title_link" href="https://www.microsoft.com/applied-sciences/people/trung-dang" target=&ldquo;blank&rdquo;><u>Trung Dang</u></a>,
+            <a class="title_link" href="https://www.microsoft.com/applied-sciences/people/dung-tran" target=&ldquo;blank&rdquo;><u>Dung Tran</u></a>,
+            <a class="title_link" href="https://www.microsoft.com/applied-sciences/people/kazuhito-koishida" target=&ldquo;blank&rdquo;><u>Kazuhito Koishida</u></a>,
+            <a class="title_link" href="https://people.eecs.berkeley.edu/~sojoudi" target=&ldquo;blank&rdquo;><u>Somayeh Sojoudi</u></a>
         </h3>
         <h4 class="institution">
             <a style="color: #DDD; text-decoration: none" href="https://www.microsoft.com/applied-sciences" target=&blank;>
@@ -29,14 +32,16 @@
         <div style="height: 13px;"></div>
 
         <!-- Buttons -->
-        <a href="demo.html"><button class="demo-button">Demo page</button></a>
+        <a href="demo.html"><button class="demo-button">Demo Page</button></a>
         <a href="https://arxiv.org/abs/2309.10740" target="_blank">
-            <button class="paper-button">Preprint paper</button>
+            <button class="paper-button">Preprint Paper</button>
         </a>
         <a href="https://github.com/Bai-YT/ConsistencyTTA" target="_blank">
             <button class="code-button"><i class="fab fa-github"></i>Code&nbsp;&nbsp;</button>
         </a>
-        <a href="evaluation.html"><button class="eval-button">Sample evaluation form</button></a>
+        <a href="https://huggingface.co/Bai-YT/ConsistencyTTA" target="_blank">
+            <button class="hf-button">Model Checkpoints</button>
+        </a>
 
         <div style="height: 7px;"></div>
     </header>
@@ -110,7 +115,17 @@
     </section>
 
     <section class="section">
-        <h2>BibTeX</h2>
+        <h2>Human Evaluation</h2>
+        <p>
+            ConsistencyTTA's performance is verified via extensive human evaluation.
+            Audio clips generated from ConsistencyTTA and baseline methods are mixed and shown to the evaluators,
+            who are then asked to rate the audio clips based on their quality and correspondence with the textual prompt.
+            A sample of the evaluation form is shown on <a href="evaluation.html">this page</a>.
+        </p>
+    </section>
+
+    <section class="section">
+        <h2>Citing Our Work (BibTeX)</h2>
         <div id="bibtex1" class="bibtex" onclick="copyToClipboard('bibtex1')">
             <i class="far fa-copy copy-icon"></i>
 <pre>@article{bai2023accelerating,
@@ -125,9 +140,9 @@
     <section class="section">
         <h2>Contact</h2>
         <p>
-            For any questions regarding our work, please email
-            <a href="mailto:yatong_bai@berkeley.edu">yatong_bai@berkeley.edu</a>.
-            We are more than happy to help with implenting our method and verifying our results.
+            For any questions or suggestions regarding our work, please email
+            <a href="mailto:yatong_bai@berkeley.edu">yatong_bai@berkeley.edu</a> and
+            <a href="mailto:dung.tran@microsoft.com">dung.tran@microsoft.com</a>.
         </p>
     </section>
 
