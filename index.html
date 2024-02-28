@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Consistency TTA Generation</title>
+    <title>ConsistencyTTA</title>
 </head>
 
 
@@ -14,14 +14,22 @@
     <script src="js_script.js"></script>
 
     <header>
-        <h1>Accelerating Diffusion-Based Text-to-Audio<br>Generation with Consistency Distillation</h1>
+        <h1><span style="font-size: 40px;">ConsistencyTTA: </span>
+            <span style="font-weight: 500; font-size: 28px;">Accelerating Diffusion-Based<br>
+                Text-to-Audio Generation with Consistency Distillation</span>
+        </h1>
 
         <h3 style="font-weight: 400;">
-            <a class="title_link" href="https://bai-yt.github.io" target=&ldquo;blank&rdquo;><u>Yatong Bai</u></a>,
-            <a class="title_link" href="https://www.microsoft.com/applied-sciences/people/trung-dang" target=&ldquo;blank&rdquo;><u>Trung Dang</u></a>,
-            <a class="title_link" href="https://www.microsoft.com/applied-sciences/people/dung-tran" target=&ldquo;blank&rdquo;><u>Dung Tran</u></a>,
-            <a class="title_link" href="https://www.microsoft.com/applied-sciences/people/kazuhito-koishida" target=&ldquo;blank&rdquo;><u>Kazuhito Koishida</u></a>,
-            <a class="title_link" href="https://people.eecs.berkeley.edu/~sojoudi" target=&ldquo;blank&rdquo;><u>Somayeh Sojoudi</u></a>
+            <a class="title_link" href="https://bai-yt.github.io"
+                target=&ldquo;blank&rdquo;><u>Yatong Bai</u></a>,
+            <a class="title_link" href="https://www.microsoft.com/applied-sciences/people/trung-dang"
+                target=&ldquo;blank&rdquo;><u>Trung Dang</u></a>,
+            <a class="title_link" href="https://www.microsoft.com/applied-sciences/people/dung-tran"
+                target=&ldquo;blank&rdquo;><u>Dung Tran</u></a>,
+            <a class="title_link" href="https://www.microsoft.com/applied-sciences/people/kazuhito-koishida"
+                target=&ldquo;blank&rdquo;><u>Kazuhito Koishida</u></a>,
+            <a class="title_link" href="https://people.eecs.berkeley.edu/~sojoudi"
+                target=&ldquo;blank&rdquo;><u>Somayeh Sojoudi</u></a>
         </h3>
         <h4 class="institution">
             <a style="color: #DDD; text-decoration: none" href="https://www.microsoft.com/applied-sciences" target=&blank;>
@@ -52,15 +60,17 @@
             Diffusion models power a vast majority of the text-to-audio generation methods.
             Unfortunately, diffusion models suffer from a slow inference speed due to iteratively querying the
             underlying denoising network, thus unsuitable for applications with time or computational constraints.
-            This work modifies the recently proposed "consistency distillation" framework to train text-to-audio 
-            models that only require a single neural network query, accelerating the generation hundreds of times.
+            This work proposes trains text-to-audio models that only require a single non-autoregressive
+            neural network query, accelerating the generation hundreds of times.
         </p>
         <p>
-            By incorporating classifier-free guidance into the distillation framework, our models retain
-            diffusion models' impressive generation quality and diversity. Furthermore, the non-recurrent
-            differentiable structure resulting from the distillation allows fine-tuning with novel loss functions.
-            We use the CLAP loss as an example, confirming that end-to-end fine-tuning 
-            further boosts the generation quality.
+            To achieve this, we propose "CFG-aware latent consistency model'', which moves consistency generation into
+            a latent space and incorporates classifier-free guidance (CFG) into the training process.
+            By doing so, our models retain diffusion models' impressive generation quality and diversity.
+            Unlike diffusion models, ConsistencyTTA's single-step generation makes its generated audio available during training.
+            We leverage this advantage to finetune ConsistencyTTA end-to-end with audio-space text-aware metrics,
+            such as the CLAP score, further enhancing the generations.
+            We use the CLAP loss as an example, confirming that end-to-end fine-tuning further boosts the generation quality.
         </p>
     </section>
 
