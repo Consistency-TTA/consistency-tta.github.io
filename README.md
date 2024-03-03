@@ -18,7 +18,9 @@ and [Somayeh Sojoudi](https://people.eecs.berkeley.edu/~sojoudi/).
 
 ### Main Experiment results
 
-Our method reduce the computation of the core step of diffusion-based text-to-audio generation by a factor of 400, while observing minimal performance degradation in terms of Fréchet Audio Distance (FAD), Fréchet Distance (FD), KL Divergence, and CLAP Scores.
+Our method reduce the computation of the core step of diffusion-based text-to-audio generation
+by a factor of 400, while observing minimal performance degradation in terms of
+Fréchet Audio Distance (FAD), Fréchet Distance (FD), KL Divergence, and CLAP Scores.
 
 |                              | # queries (↓) | CLAP<sub>T</sub> (↑) | CLAP<sub>A</sub> (↑) | FAD (↓) | FD (↓) | KLD (↓) |
 |------------------------------|---------------|----------------------|----------------------|---------|--------|---------|
@@ -26,7 +28,8 @@ Our method reduce the computation of the core step of diffusion-based text-to-au
 | Consistency + CLAP FT (Ours) | 1             | 24.69                | 72.54                | 2.406   | 20.97  | 1.358   |
 | Consistency (Ours)           | 1             | 22.50                | 72.30                | 2.575   | 22.08  | 1.354   |
 
-[This benchmark](https://paperswithcode.com/sota/audio-generation-on-audiocaps) demonstrates how our single-step models stack up with previous methods, most of which mostly require hundreds of generation steps.
+[This benchmark](https://paperswithcode.com/sota/audio-generation-on-audiocaps) demonstrates how our
+single-step models stack up with previous methods, most of which mostly require hundreds of generation steps.
 
 
 ### Cite Our Work (BibTeX)
