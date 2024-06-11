@@ -33,7 +33,7 @@ header h3 {
 
 .institution {
     font-weight: 200;
-    font-size: 1em;
+    font-size: 1.1em;
     font-style: italic;
     margin-top: -.4em;
 }
@@ -102,24 +102,38 @@ button {
 }
 
 .home-button {
-    background-color: #597a47;
+    background-color: #5d5d5d;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     margin: 0px 13px;
-    width: 180px;
+    width: 130px;
+    height: 70px;
+    vertical-align: middle;
+}
+
+.home-button-wide {
+    background-color: #5d5d5d;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin: 0px 13px;
+    width: 200px;
+    vertical-align: middle;
 }
 
 .demo-button {
     background-color: #7a5947;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     margin: 0px 13px;
-    width: 180px;
+    width: 130px;
+    height: 70px;
+    vertical-align: middle;
 }
 
 .hf-button {
     background-color: #c1436d;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     margin: 0px 13px;
-    width: 200px;
+    width: 130px;
+    height: 70px;
+    vertical-align: middle;
 }
 
 .eval-button {
@@ -134,16 +148,31 @@ button {
     text-shadow: 3px 3px 1.5px rgba(0, 0, 0, 0.15);
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     margin: 0px 13px;
-    width: 180px;
+    width: 130px;
+    height: 70px;
+    vertical-align: middle;
 }
 
-.code-button {
+.livedemo-button {
     background-color: #df801d;
     font-weight: bold;
     text-shadow: 3px 3px 1.5px rgba(0, 0, 0, 0.15);
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     margin: 0px 13px;
-    width: 160px;
+    width: 140px;
+    height: 70px;
+    vertical-align: middle;
+}
+
+.code-button {
+    background-color: #18a74c;
+    font-weight: bold;
+    text-shadow: 3px 3px 1.5px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin: 0px 13px;
+    width: 130px;
+    height: 70px;
+    vertical-align: middle;
 }
 
 a .fab.fa-github {

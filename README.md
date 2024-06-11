@@ -1,7 +1,7 @@
 # ConsistencyTTA: Accelerating Diffusion-Based Text-to-Audio Generation with Consistency Distillation
 
 This is the [**official website**](https://consistency-tta.github.io) for the paper \
-"Accelerating Diffusion-Based Text-to-Audio Generation with Consistency Distillation" \
+*ConsistencyTTA: Accelerating Diffusion-Based Text-to-Audio Generation with Consistency Distillation* \
 from Microsoft Applied Science Group and UC Berkeley \
 by [Yatong Bai](https://bai-yt.github.io),
 [Trung Dang](https://www.microsoft.com/applied-sciences/people/trung-dang),
@@ -9,8 +9,9 @@ by [Yatong Bai](https://bai-yt.github.io),
 [Kazuhito Koishida](https://www.microsoft.com/applied-sciences/people/kazuhito-koishida),
 and [Somayeh Sojoudi](https://people.eecs.berkeley.edu/~sojoudi/).
 
+**[[🤗 Live Demo](https://huggingface.co/spaces/Bai-YT/ConsistencyTTA)]** &nbsp;&nbsp;&nbsp;&nbsp;
 **[[Preprint Paper](https://arxiv.org/abs/2309.10740)]** &nbsp;&nbsp;&nbsp;&nbsp;
-**[[Project Homepage](https://consistency-tta.github.io)]** &nbsp;&nbsp;&nbsp;&nbsp;
+**[[Project Homepage](https://consistency-tta.github.io)]** &nbsp;&nbsp;&nbsp;&nbsp; \
 **[[Code](https://github.com/Bai-YT/ConsistencyTTA)]** &nbsp;&nbsp;&nbsp;&nbsp;
 **[[Model Checkpoints](https://huggingface.co/Bai-YT/ConsistencyTTA)]** &nbsp;&nbsp;&nbsp;&nbsp;
 **[[Generation Examples](https://consistency-tta.github.io/demo.html)]**
@@ -35,8 +36,8 @@ single-step models stack up with previous methods, most of which mostly require 
 ### Cite Our Work (BibTeX)
 
 ```bibtex
-@article{bai2023accelerating,
-  title={Accelerating Diffusion-Based Text-to-Audio Generation with Consistency Distillation},
+@article{bai2023consistencytta,
+  title={ConsistencyTTA: Accelerating Diffusion-Based Text-to-Audio Generation with Consistency Distillation},
   author={Bai, Yatong and Dang, Trung and Tran, Dung and Koishida, Kazuhito and Sojoudi, Somayeh},
   journal={arXiv preprint arXiv:2309.10740},
   year={2023}
