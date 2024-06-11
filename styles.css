@@ -314,3 +314,14 @@ audio.scaled {
 .bibtex:hover .copy-icon {
     color: #007BFF;  /* Change color on hover for better user feedback */
 }
+
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Ensures the content inside the flex container is centered horizontally */
+}
+.content {
+    display: inline-flex;
+    align-items: center;
+}
