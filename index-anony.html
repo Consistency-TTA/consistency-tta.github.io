@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>ConsistencyTTA</title>
+</head>
+
+
+<body>
+    <script src="js_script.js"></script>
+
+    <header>
+        <h1><span style="font-size: 40px;">ConsistencyTTA: </span>
+            <span style="font-weight: 500; font-size: 28px;">Accelerating Diffusion-Based<br>
+                Text-to-Audio Generation with Consistency Distillation</span>
+        </h1>
+
+        <div style="height: 5px;"></div>
+
+        <!-- Buttons -->
+        <a href="demo-anony.html"><button class="demo-button">Demo Page</button></a>
+
+        <div style="height: 7px;"></div>
+    </header>
+
+    <section class="section">
+        <h2>Description</h2>
+        <p>
+            Diffusion models power a vast majority of the text-to-audio generation methods.
+            Unfortunately, diffusion models suffer from a slow inference speed due to iteratively querying the
+            underlying denoising network, thus unsuitable for applications with time or computational constraints.
+            This work proposes text-to-audio models that only require <b><i>a single non-autoregressive neural network
+            query</i></b>, accelerating the generation hundreds of times and enabling on-device audio generation.
+        </p>
+        <p>
+            By incorporating classifier-free guidance into the distillation framework, our models retain
+            diffusion models' impressive generation quality and diversity. Furthermore, the non-recurrent
+            differentiable structure resulting from the distillation allows fine-tuning with novel loss functions.
+            We use the CLAP loss as an example, confirming that end-to-end fine-tuning further boosts the generation quality.
+        </p>
+    </section>
+
+    <section class="section">
+        <h2>Main Experiment Results</h2>
+        <center>
+            <img src="main_figure_.png" alt="ConsistencyTTA Results" title="Results" width="480"/>
+        </center>
+        <p>
+            Our method reduce the computation of the core step of diffusion-based text-to-audio generation by 
+            a factor of 400, while observing minimal performance degradation in terms of 
+            Fréchet Audio Distance (FAD), Fréchet Distance (FD), KL Divergence, and CLAP Scores.
+        </p>
+        <table class="result-table">
+            <thead>
+                <tr class="result-row">
+                    <th class="result-head"></th> <th class="result-head"># queries (↓)</th>
+                    <th class="result-head">CLAP<sub>T</sub> (↑)</th> <th class="result-head">CLAP<sub>A</sub> (↑)</th>
+                    <th class="result-head">FAD (↓)</th> <th class="result-head">FD (↓)</th> <th class="result-head">KLD (↓)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="result-row" style="color: #a0a0a0">
+                    <td class="result-data">Diffusion (Baseline)</td> <td class="result-data">400</td>
+                    <td class="result-data">24.57</td> <td class="result-data">72.79</td>
+                    <td class="result-data">1.908</td> <td class="result-data">19.57</td> <td class="result-data">1.350</td>
+                </tr>
+                <tr class="result-row">
+                    <td class="result-data">Consistency + CLAP FT (Ours)</td> <td class="result-data">1</td>
+                    <td class="result-data">24.69</td> <td class="result-data">72.54</td>
+                    <td class="result-data">2.406</td> <td class="result-data">20.97</td> <td class="result-data">1.358</td>
+                </tr>
+                <tr class="result-row">
+                    <td class="result-data">Consistency (Ours)</td> <td class="result-data">1</td>
+                    <td class="result-data">22.50</td> <td class="result-data">72.30</td>
+                    <td class="result-data">2.575</td> <td class="result-data">22.08</td> <td class="result-data">1.354</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section class="section">
+        <h2>Generation Diversity</h2>
+        <p>
+            Consistency models demonstrate non-trivial generation diversity, as do diffusion models.
+            In <a href="diversity-anony.html">this page</a>, we present 50 groups of generations from
+            four different random seeds to demonstrate this diversity, showing that our method
+            combines the diversity of diffusion models and the efficiency of single-step models.
+        </p>
+    </section>
+
+    <section class="section">
+        <h2>Human Evaluation</h2>
+        <p>
+            ConsistencyTTA's performance is verified via extensive human evaluation.
+            Audio clips generated from ConsistencyTTA and baseline methods are mixed and shown to the evaluators,
+            who are then asked to rate the audio clips based on their quality and correspondence with the textual prompt.
+            A sample of the evaluation form is shown on <a href="evaluation-anony.html">this page</a>.
+        </p>
+    </section>
+
+    <footer></footer>
+</body>
+
+
+</html>

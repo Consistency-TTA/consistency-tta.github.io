@@ -1,0 +1,1743 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>ConsistencyTTA Diversity</title>
+</head>
+
+<body>
+    <header>
+        <h1>Generation Diversity</h1>
+        <h3><b>
+            <span style="font-weight: 900; font-size: 22px">ConsistencyTTA:</span>
+            <span style="font-weight: 500;">Accelerating Diffusion-Based Text-to-Audio Generation with Consistency Distillation</span><br>
+        </b></h3>
+
+        <div style="height:13px;"></div>
+
+        <!-- Buttons -->
+        <a href="index-anony.html"><button class="home-button">Project Home</button></a>
+
+        <div style="height:7px;"></div>
+    </header>
+
+    <section class="section">
+        <p>This demonstration page presents the generation diversity of the proposed consistency TTA model.
+            The generations correspond to the first 50 AudioCaps test prompts,
+            and are from our consistency model with four different random seeds.</p>
+        <p>For quantitative evidence, we standardize each generated Mel spectrogram,
+            calculate the standard deviation across different seeds,
+            and average the standard deviation across all Mel spectrogram points of the 50 examples.
+            The averaged number is 0.871, demonstrating non-trivial generation diversity.</p>
+        <p>Please listen to the following audio clips to confirm the generation quality of these seeds.
+            Since the model are not trained on speech data, we do not expect it to produce meaningful speech.</p>
+
+        <hr>
+        <h3>Prompt 0</h3>
+        <h4>A machine is making clicking sound as people talk in the background.</h4>
+        <table>
+            <tr>
+                <td class="demo-data">Seed I</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_0/output_0.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed II</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_45510/output_0.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed III</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_20230817/output_0.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed IV</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_25252/output_0.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 1</h3>
+        <h4>A missile launching followed by an explosion and metal screeching as a motor hums in the background.</h4>
+        <table>
+            <tr>
+                <td class="demo-data">Seed I</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_0/output_1.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed II</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_45510/output_1.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed III</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_20230817/output_1.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed IV</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_25252/output_1.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 2</h3>
+        <h4>A toy train running as a young boy talks followed by plastic clanking then a child laughing.</h4>
+        <table>
+            <tr>
+                <td class="demo-data">Seed I</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_0/output_2.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed II</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_45510/output_2.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed III</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_20230817/output_2.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed IV</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_25252/output_2.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 3</h3>
+        <h4>Clattering of a train is ongoing, a railroad crossing bell rings, and a train horn blows.</h4>
+        <table>
+            <tr>
+                <td class="demo-data">Seed I</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_0/output_3.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed II</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_45510/output_3.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed III</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_20230817/output_3.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed IV</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_25252/output_3.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 4</h3>
+        <h4>Food sizzling with some knocking and banging followed by a woman speaking.</h4>
+        <table>
+            <tr>
+                <td class="demo-data">Seed I</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_0/output_4.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed II</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_45510/output_4.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed III</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_20230817/output_4.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed IV</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_25252/output_4.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 5</h3>
+        <h4>A man talks while several animals make noises in the background.</h4>
+        <table>
+            <tr>
+                <td class="demo-data">Seed I</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_0/output_5.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed II</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_45510/output_5.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed III</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_20230817/output_5.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed IV</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_25252/output_5.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 6</h3>
+        <h4>An emergency siren ringing with car horn honking.</h4>
+        <table>
+            <tr>
+                <td class="demo-data">Seed I</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_0/output_6.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed II</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_45510/output_6.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed III</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_20230817/output_6.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed IV</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_25252/output_6.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 7</h3>
+        <h4>An infant yelling as a young boy talks while a hard surface is slapped several times.</h4>
+        <table>
+            <tr>
+                <td class="demo-data">Seed I</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_0/output_7.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed II</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_45510/output_7.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed III</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_20230817/output_7.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed IV</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_25252/output_7.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 8</h3>
+        <h4>A bus engine running followed by a bus horn honking.</h4>
+        <table>
+            <tr>
+                <td class="demo-data">Seed I</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_0/output_8.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed II</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_45510/output_8.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed III</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_20230817/output_8.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed IV</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_25252/output_8.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 9</h3>
+        <h4>A man speaking followed by snoring.</h4>
+        <table>
+            <tr>
+                <td class="demo-data">Seed I</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_0/output_9.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed II</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_45510/output_9.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed III</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_20230817/output_9.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed IV</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_25252/output_9.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 10</h3>
+        <h4>Rolling thunder with lightning strikes.</h4>
+        <table>
+            <tr>
+                <td class="demo-data">Seed I</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_0/output_10.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed II</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_45510/output_10.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed III</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_20230817/output_10.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed IV</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_25252/output_10.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 11</h3>
+        <h4>A woman and a baby are having a conversation.</h4>
+        <table>
+            <tr>
+                <td class="demo-data">Seed I</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_0/output_11.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed II</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_45510/output_11.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed III</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_20230817/output_11.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed IV</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_25252/output_11.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 12</h3>
+        <h4>Water trickling with man speaking.</h4>
+        <table>
+            <tr>
+                <td class="demo-data">Seed I</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_0/output_12.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed II</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_45510/output_12.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed III</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_20230817/output_12.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed IV</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_25252/output_12.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 13</h3>
+        <h4>Female speech, a toilet flushing and then more speech.</h4>
+        <table>
+            <tr>
+                <td class="demo-data">Seed I</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_0/output_13.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed II</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_45510/output_13.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed III</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_20230817/output_13.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed IV</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_25252/output_13.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 14</h3>
+        <h4>Loud high humming and croaking sound.</h4>
+        <table>
+            <tr>
+                <td class="demo-data">Seed I</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_0/output_14.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed II</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_45510/output_14.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed III</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_20230817/output_14.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed IV</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_25252/output_14.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 15</h3>
+        <h4>A cuckoo bird coos followed by a train running on railroad tracks as a bell dings in the background.</h4>
+        <table>
+            <tr>
+                <td class="demo-data">Seed I</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_0/output_15.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed II</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_45510/output_15.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed III</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_20230817/output_15.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed IV</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_25252/output_15.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 16</h3>
+        <h4>A man talking then meowing and hissing.</h4>
+        <table>
+            <tr>
+                <td class="demo-data">Seed I</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_0/output_16.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed II</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_45510/output_16.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed III</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_20230817/output_16.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed IV</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_25252/output_16.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 17</h3>
+        <h4>Water flowing through pipes.</h4>
+        <table>
+            <tr>
+                <td class="demo-data">Seed I</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_0/output_17.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed II</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_45510/output_17.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed III</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_20230817/output_17.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed IV</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_25252/output_17.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 18</h3>
+        <h4>An infant crying followed by a man laughing.</h4>
+        <table>
+            <tr>
+                <td class="demo-data">Seed I</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_0/output_18.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed II</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_45510/output_18.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed III</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_20230817/output_18.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed IV</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_25252/output_18.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 19</h3>
+        <h4>A man speaking, followed by a door shutting, and then the man speaks some more.</h4>
+        <table>
+            <tr>
+                <td class="demo-data">Seed I</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_0/output_19.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed II</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_45510/output_19.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed III</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_20230817/output_19.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed IV</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_25252/output_19.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 20</h3>
+        <h4>The wind is blowing, and a person is whistling a tune.</h4>
+        <table>
+            <tr>
+                <td class="demo-data">Seed I</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_0/output_20.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed II</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_45510/output_20.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed III</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_20230817/output_20.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed IV</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_25252/output_20.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 21</h3>
+        <h4>Motor vehicles are driving with loud engines and a person whistles.</h4>
+        <table>
+            <tr>
+                <td class="demo-data">Seed I</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_0/output_21.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed II</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_45510/output_21.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed III</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_20230817/output_21.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed IV</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_25252/output_21.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 22</h3>
+        <h4>Bubbles gurgling and water spraying as a man speaks softly while crowd of people talk in the background.</h4>
+        <table>
+            <tr>
+                <td class="demo-data">Seed I</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_0/output_22.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed II</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_45510/output_22.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed III</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_20230817/output_22.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed IV</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_25252/output_22.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 23</h3>
+        <h4>Metal clacking followed by a man talking then a metal bang as footsteps shuffle on dirt and a group of men laugh.</h4>
+        <table>
+            <tr>
+                <td class="demo-data">Seed I</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_0/output_23.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed II</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_45510/output_23.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed III</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_20230817/output_23.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed IV</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_25252/output_23.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 24</h3>
+        <h4>Ducks quack and water splashes with some animal screeching in the background.</h4>
+        <table>
+            <tr>
+                <td class="demo-data">Seed I</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_0/output_24.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed II</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_45510/output_24.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed III</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_20230817/output_24.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed IV</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_25252/output_24.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 25</h3>
+        <h4>Multiple gun shots woman screaming.</h4>
+        <table>
+            <tr>
+                <td class="demo-data">Seed I</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_0/output_25.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed II</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_45510/output_25.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed III</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_20230817/output_25.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed IV</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_25252/output_25.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 26</h3>
+        <h4>An aircraft engine runs and vibrates, metal spinning and grinding occur, and the engine accelerates and fades into the distance.</h4>
+        <table>
+            <tr>
+                <td class="demo-data">Seed I</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_0/output_26.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed II</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_45510/output_26.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed III</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_20230817/output_26.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed IV</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_25252/output_26.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 27</h3>
+        <h4>A man is talking as tap water is running.</h4>
+        <table>
+            <tr>
+                <td class="demo-data">Seed I</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_0/output_27.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed II</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_45510/output_27.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed III</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_20230817/output_27.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed IV</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_25252/output_27.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 28</h3>
+        <h4>Woman speaking, plastic container opening.</h4>
+        <table>
+            <tr>
+                <td class="demo-data">Seed I</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_0/output_28.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed II</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_45510/output_28.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed III</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_20230817/output_28.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed IV</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_25252/output_28.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 29</h3>
+        <h4>A male speaking.</h4>
+        <table>
+            <tr>
+                <td class="demo-data">Seed I</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_0/output_29.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed II</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_45510/output_29.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed III</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_20230817/output_29.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed IV</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_25252/output_29.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 30</h3>
+        <h4>A vehicle engine revving followed by tires skidding as a group of people talk in the background.</h4>
+        <table>
+            <tr>
+                <td class="demo-data">Seed I</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_0/output_30.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed II</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_45510/output_30.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed III</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_20230817/output_30.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed IV</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_25252/output_30.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 31</h3>
+        <h4>A woman talking followed by a plate rattling as food and oil sizzle.</h4>
+        <table>
+            <tr>
+                <td class="demo-data">Seed I</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_0/output_31.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed II</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_45510/output_31.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed III</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_20230817/output_31.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed IV</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_25252/output_31.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 32</h3>
+        <h4>Humming of an idling engine.</h4>
+        <table>
+            <tr>
+                <td class="demo-data">Seed I</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_0/output_32.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed II</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_45510/output_32.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed III</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_20230817/output_32.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed IV</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_25252/output_32.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 33</h3>
+        <h4>A train running on railroad tracks as a train horn whistle blows several times while railroad crossing warning signals are ringing.</h4>
+        <table>
+            <tr>
+                <td class="demo-data">Seed I</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_0/output_33.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed II</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_45510/output_33.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed III</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_20230817/output_33.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed IV</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_25252/output_33.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 34</h3>
+        <h4>Several varying hisses.</h4>
+        <table>
+            <tr>
+                <td class="demo-data">Seed I</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_0/output_34.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed II</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_45510/output_34.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed III</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_20230817/output_34.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed IV</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_25252/output_34.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 35</h3>
+        <h4>A motorboat driving by as water splashes followed by wind blowing into a microphone.</h4>
+        <table>
+            <tr>
+                <td class="demo-data">Seed I</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_0/output_35.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed II</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_45510/output_35.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed III</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_20230817/output_35.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed IV</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_25252/output_35.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 36</h3>
+        <h4>A bus engine slowing down then accelerating.</h4>
+        <table>
+            <tr>
+                <td class="demo-data">Seed I</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_0/output_36.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed II</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_45510/output_36.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed III</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_20230817/output_36.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed IV</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_25252/output_36.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 37</h3>
+        <h4>A woman talks as a baby cries.</h4>
+        <table>
+            <tr>
+                <td class="demo-data">Seed I</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_0/output_37.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed II</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_45510/output_37.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed III</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_20230817/output_37.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed IV</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_25252/output_37.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 38</h3>
+        <h4>Kids laughing then talking followed by a young man talking as wind blows into a microphone.</h4>
+        <table>
+            <tr>
+                <td class="demo-data">Seed I</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_0/output_38.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed II</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_45510/output_38.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed III</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_20230817/output_38.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed IV</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_25252/output_38.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 39</h3>
+        <h4>A woman delivers a speech.</h4>
+        <table>
+            <tr>
+                <td class="demo-data">Seed I</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_0/output_39.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed II</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_45510/output_39.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed III</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_20230817/output_39.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed IV</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_25252/output_39.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 40</h3>
+        <h4>Clicking followed by humming noise.</h4>
+        <table>
+            <tr>
+                <td class="demo-data">Seed I</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_0/output_40.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed II</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_45510/output_40.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed III</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_20230817/output_40.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed IV</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_25252/output_40.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 41</h3>
+        <h4>Electronic beeping followed by a cat singing then meowing as paper shuffles and a man talks with music playing in the background.</h4>
+        <table>
+            <tr>
+                <td class="demo-data">Seed I</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_0/output_41.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed II</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_45510/output_41.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed III</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_20230817/output_41.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed IV</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_25252/output_41.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 42</h3>
+        <h4>A high frequency motor hums loudly and splashes water.</h4>
+        <table>
+            <tr>
+                <td class="demo-data">Seed I</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_0/output_42.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed II</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_45510/output_42.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed III</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_20230817/output_42.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed IV</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_25252/output_42.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 43</h3>
+        <h4>An adult male speaks, followed by another adult male speaking.</h4>
+        <table>
+            <tr>
+                <td class="demo-data">Seed I</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_0/output_43.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed II</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_45510/output_43.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed III</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_20230817/output_43.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed IV</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_25252/output_43.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 44</h3>
+        <h4>A horn and then an engine revving.</h4>
+        <table>
+            <tr>
+                <td class="demo-data">Seed I</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_0/output_44.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed II</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_45510/output_44.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed III</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_20230817/output_44.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed IV</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_25252/output_44.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 45</h3>
+        <h4>Man speaking while insects buzz around.</h4>
+        <table>
+            <tr>
+                <td class="demo-data">Seed I</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_0/output_45.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed II</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_45510/output_45.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed III</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_20230817/output_45.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed IV</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_25252/output_45.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 46</h3>
+        <h4>A motorboat engine running as water splashes and a man shouts followed by birds chirping in the background.</h4>
+        <table>
+            <tr>
+                <td class="demo-data">Seed I</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_0/output_46.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed II</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_45510/output_46.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed III</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_20230817/output_46.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed IV</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_25252/output_46.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 47</h3>
+        <h4>A man speaks and a machine runs with a continued speech.</h4>
+        <table>
+            <tr>
+                <td class="demo-data">Seed I</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_0/output_47.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed II</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_45510/output_47.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed III</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_20230817/output_47.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed IV</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_25252/output_47.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 48</h3>
+        <h4>Man speaks followed by whistling.</h4>
+        <table>
+            <tr>
+                <td class="demo-data">Seed I</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_0/output_48.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed II</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_45510/output_48.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed III</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_20230817/output_48.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed IV</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_25252/output_48.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h3>Prompt 49</h3>
+        <h4>Warning bells ring and a train passes with a honking horn.</h4>
+        <table>
+            <tr>
+                <td class="demo-data">Seed I</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_0/output_49.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed II</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_45510/output_49.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed III</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_20230817/output_49.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td class="demo-data">Seed IV</td>
+                <td class="demo-data"><audio class="scaled" controls preload="none">
+                    <source src="compare_seed/seed_25252/output_49.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </table>
+
+    </section>
+
+    <footer></footer>
+</body>
+
+</html>

@@ -63,8 +63,8 @@
             Diffusion models power a vast majority of the text-to-audio generation methods.
             Unfortunately, diffusion models suffer from a slow inference speed due to iteratively querying the
             underlying denoising network, thus unsuitable for applications with time or computational constraints.
-            This work proposes trains text-to-audio models that only require a single non-autoregressive
-            neural network query, accelerating the generation hundreds of times.
+            This work proposes text-to-audio models that only require <b><i>a single non-autoregressive neural network
+            query</i></b>, accelerating the generation hundreds of times and enabling on-device audio generation.
         </p>
         <p>
             To achieve this, we propose "CFG-aware latent consistency model'', which moves consistency generation into
@@ -90,8 +90,8 @@
             </div>
         </div>
         <p>
-            Our method reduce the computation of the core step of diffusion-based text-to-audio generation by 
-            a factor of 400, while observing minimal performance degradation in terms of 
+            Our method reduce the computation of the core step of diffusion-based text-to-audio generation by
+            a factor of 400 and enables on-device generation, while observing minimal performance degradation in
             Fréchet Audio Distance (FAD), Fréchet Distance (FD), KL Divergence, and CLAP Scores.
         </p>
         <table class="result-table">
