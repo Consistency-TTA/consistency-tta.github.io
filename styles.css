@@ -46,7 +46,7 @@ header h3 {
 
 .section {
     font-weight: 400;
-    max-width: 850px;
+    max-width: 900px;
     margin: 20px auto;
     padding: 20px;
     padding-top: 10px;
@@ -248,13 +248,14 @@ tr td:last-child {
 
 /* Base table styles */
 .result-table {
-    max-width: 840px;
+    max-width: 880px;
     width: 100%;
     border-collapse: collapse;
     margin: auto;
     margin: 12px auto;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    font-weight: 300;
 }
 
 /* Header styles */
@@ -266,9 +267,20 @@ tr td:last-child {
     padding: 8px 12px;
 }
 
+.result-head-2 {
+    background-color: #55687a; /* Slightly lighter background color */
+    color: #ecf0f1;
+    font-weight: bold;
+    text-align: left;
+    padding: 8px 12px;
+}
+
 /* Row & data styles */
-.result-row:nth-of-type(odd) {
-    background-color: #f7f9fc;
+.result-row {
+    background-color: #e7e9ee;
+}
+.result-row-2 {
+    background-color: #ffffff;
 }
 
 .result-row:hover {
@@ -279,6 +291,18 @@ tr td:last-child {
 .result-data {
     padding: 7px 12px;
     border-bottom: 1px solid #e7ebef;
+    background-color: #dfe3f241;
+    font-size: 1.2em;
+}
+.result-data-2 {
+    padding: 7px 12px;
+    border-bottom: 1px solid #e7ebef;
+    font-size: 1.2em;
+}
+.result-data-small {
+    padding: 7px 12px;
+    border-bottom: 1px solid #e7ebef;
+    background-color: #dfe3f241;
 }
 
 /* Optional: Add transitions for smoother hover effects */

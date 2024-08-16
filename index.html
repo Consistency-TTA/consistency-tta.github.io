@@ -97,31 +97,58 @@
         <p>
             Our method reduce the computation of the core step of diffusion-based text-to-audio generation by
             a factor of 400 and enables on-device generation, while observing minimal performance degradation in
-            Fréchet Audio Distance (FAD), Fréchet Distance (FD), KL Divergence, and CLAP Scores.
+            Fréchet Audio Distance (FAD), Fréchet Distance (FD), KL Divergence, and CLAP Scores.<br>
+            Generation Time is the time in minutes to generate the entire validation set (882 samples).<br>
+            <i>↑: higher is better; ↓: lower is better.</i>
         </p>
         <table class="result-table">
             <thead>
                 <tr class="result-row">
-                    <th class="result-head"></th> <th class="result-head"># queries (↓)</th>
-                    <th class="result-head">CLAP<sub>T</sub> (↑)</th> <th class="result-head">CLAP<sub>A</sub> (↑)</th>
-                    <th class="result-head">FAD (↓)</th> <th class="result-head">FD (↓)</th> <th class="result-head">KLD (↓)</th>
+                    <th class="result-head"></th>
+                    <th class="result-head-2">Model Queries<br>↓</th> <th class="result-head-2">Generation Time<br>↓</th>
+                    <th class="result-head">Subjective Quality<br>↑</th> <th class="result-head">Subjective Text Align<br>↑</th>
+                    <th class="result-head-2">CLAP<sub>T</sub><br>↑</th> <th class="result-head-2">CLAP<sub>A</sub><br>↑</th>
+                    <th class="result-head-2">FAD<br>↓</th> <th class="result-head-2">FD<br>↓</th> <th class="result-head-2">KLD<br>↓</th>
                 </tr>
             </thead>
             <tbody>
-                <tr class="result-row" style="color: #a0a0a0">
-                    <td class="result-data">Diffusion (Baseline)</td> <td class="result-data">400</td>
-                    <td class="result-data">24.57</td> <td class="result-data">72.79</td>
-                    <td class="result-data">1.908</td> <td class="result-data">19.57</td> <td class="result-data">1.350</td>
+                <tr class="result-row-2" style="color: #898989">
+                    <td class="result-data-small"><span style="font-weight: 400;">AudioLDM-L (Baseline)</span></td>
+                    <td class="result-data-2">400</td> <td class="result-data-2">-</td> <td class="result-data">-</td>
+                    <td class="result-data">-</td> <td class="result-data-2">-</td> <td class="result-data-2">-</td>
+                    <td class="result-data-2"><span style="font-weight: 400;">2.08</span></td> <td class="result-data-2">27.12</td>
+                    <td class="result-data-2">1.86</td>
+                </tr>
+                <tr class="result-row-2" style="color: #898989">
+                    <td class="result-data-small"><span style="font-weight: 400;">TANGO (Baseline)</span></td>
+                    <td class="result-data-2">400</td> <td class="result-data-2">168</td>
+                    <td class="result-data"><b>4.136</b></td> <td class="result-data"><b>4.064</b></td>
+                    <td class="result-data-2"><span style="font-weight: 400;">24.10</span></td> <td class="result-data-2"><b>72.85</b></td>
+                    <td class="result-data-2"><b>1.631</b></td> <td class="result-data-2"><b>20.11</b></td>
+                    <td class="result-data-2">1.362</td>
                 </tr>
                 <tr class="result-row">
-                    <td class="result-data">Consistency + CLAP FT (Ours)</td> <td class="result-data">1</td>
-                    <td class="result-data">24.69</td> <td class="result-data">72.54</td>
-                    <td class="result-data">2.406</td> <td class="result-data">20.97</td> <td class="result-data">1.358</td>
+                    <td class="result-data-small"><span style="font-weight: 400;">ConsistencyTTA + CLAP-FT</span></td>
+                    <td class="result-data-2"><b>1</b></td> <td class="result-data-2"><b>2.3</b></td>
+                    <td class="result-data">3.830</td> <td class="result-data"><b>4.064</b></td>
+                    <td class="result-data-2"><b>24.69</b></td> <td class="result-data-2"><span style="font-weight: 400;">72.54</span></td>
+                    <td class="result-data-2">2.406</td> <td class="result-data-2"><span style="font-weight: 400;">20.97</span></td>
+                    <td class="result-data-2"><span style="font-weight: 400;">1.358</span></td>
                 </tr>
                 <tr class="result-row">
-                    <td class="result-data">Consistency (Ours)</td> <td class="result-data">1</td>
-                    <td class="result-data">22.50</td> <td class="result-data">72.30</td>
-                    <td class="result-data">2.575</td> <td class="result-data">22.08</td> <td class="result-data">1.354</td>
+                    <td class="result-data-small"><span style="font-weight: 400;">ConsistencyTTA</span></td>
+                    <td class="result-data-2"><b>1</b></td> <td class="result-data-2"><b>2.3</b></td>
+                    <td class="result-data"><span style="font-weight: 400;">3.902</span></td> <td class="result-data">4.010</td>
+                    <td class="result-data-2">22.50</td> <td class="result-data-2">72.30</td>
+                    <td class="result-data-2">2.575</td> <td class="result-data-2">22.08</td>
+                    <td class="result-data-2"><b>1.354</b></td>
+                </tr>
+                <tr class="result-row-2-small" style="color: #898989">
+                    <td class="result-data"><span style="font-weight: 400;">Ground Truth</span></td>
+                    <td class="result-data-2">-</td> <td class="result-data-2">-</td>
+                    <td class="result-data">-</td> <td class="result-data">-</td>
+                    <td class="result-data-2">26.71</td> <td class="result-data-2">100</td>
+                    <td class="result-data-2">-</td> <td class="result-data-2">-</td> <td class="result-data-2">-</td>
                 </tr>
             </tbody>
         </table>
