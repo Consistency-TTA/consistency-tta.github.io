@@ -292,17 +292,31 @@ tr td:last-child {
     padding: 7px 12px;
     border-bottom: 1px solid #e7ebef;
     background-color: #dfe3f241;
-    font-size: 1.2em;
+    font-size: 1.15em;
+}
+.result-data-400 {
+    padding: 7px 12px;
+    border-bottom: 1px solid #e7ebef;
+    background-color: #dfe3f241;
+    font-size: 1.15em;
+    font-weight: 400;
 }
 .result-data-2 {
     padding: 7px 12px;
     border-bottom: 1px solid #e7ebef;
-    font-size: 1.2em;
+    font-size: 1.15em;
+}
+.result-data-2-400 {
+    padding: 7px 12px;
+    border-bottom: 1px solid #e7ebef;
+    font-size: 1.15em;
+    font-weight: 400;
 }
 .result-data-small {
     padding: 7px 12px;
     border-bottom: 1px solid #e7ebef;
     background-color: #dfe3f241;
+    font-weight: 400;
 }
 
 /* Optional: Add transitions for smoother hover effects */

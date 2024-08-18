@@ -78,7 +78,8 @@
             We use the CLAP loss as an example, confirming that end-to-end fine-tuning further boosts the generation quality.
         </p>
         <p>
-            <b>Please join us at <a href="https://interspeech2024.org" target="_blank">INTERSPEECH 2024</a> at Kos Island, Greece!</b>
+            <b>Please check out <a href="poster.pdf" target="_blank">our poster</a> at 
+                <a href="https://interspeech2024.org" target="_blank">INTERSPEECH 2024</a> at Kos Island, Greece!</b>
         </p>
     </section>
 
@@ -113,40 +114,36 @@
             </thead>
             <tbody>
                 <tr class="result-row-2" style="color: #898989">
-                    <td class="result-data-small"><span style="font-weight: 400;">AudioLDM-L (Baseline)</span></td>
-                    <td class="result-data-2">400</td> <td class="result-data-2">-</td> <td class="result-data">-</td>
+                    <td class="result-data-small">AudioLDM-L (Baseline)</td> <td class="result-data-2">400</td>
+                    <td class="result-data-2">-</td> <td class="result-data">-</td>
                     <td class="result-data">-</td> <td class="result-data-2">-</td> <td class="result-data-2">-</td>
-                    <td class="result-data-2"><span style="font-weight: 400;">2.08</span></td> <td class="result-data-2">27.12</td>
-                    <td class="result-data-2">1.86</td>
+                    <td class="result-data-2-400">2.08</td> <td class="result-data-2">27.12</td> <td class="result-data-2">1.86</td>
                 </tr>
                 <tr class="result-row-2" style="color: #898989">
-                    <td class="result-data-small"><span style="font-weight: 400;">TANGO (Baseline)</span></td>
+                    <td class="result-data-small">TANGO (Baseline)</td>
                     <td class="result-data-2">400</td> <td class="result-data-2">168</td>
                     <td class="result-data"><b>4.136</b></td> <td class="result-data"><b>4.064</b></td>
-                    <td class="result-data-2"><span style="font-weight: 400;">24.10</span></td> <td class="result-data-2"><b>72.85</b></td>
-                    <td class="result-data-2"><b>1.631</b></td> <td class="result-data-2"><b>20.11</b></td>
-                    <td class="result-data-2">1.362</td>
+                    <td class="result-data-2-400">24.10</td> <td class="result-data-2"><b>72.85</b></td>
+                    <td class="result-data-2"><b>1.631</b></td> <td class="result-data-2"><b>20.11</b></td> <td class="result-data-2">1.362</td>
                 </tr>
                 <tr class="result-row">
-                    <td class="result-data-small"><span style="font-weight: 400;">ConsistencyTTA + CLAP-FT</span></td>
+                    <td class="result-data-small">ConsistencyTTA + CLAP-FT</td>
                     <td class="result-data-2"><b>1</b></td> <td class="result-data-2"><b>2.3</b></td>
                     <td class="result-data">3.830</td> <td class="result-data"><b>4.064</b></td>
-                    <td class="result-data-2"><b>24.69</b></td> <td class="result-data-2"><span style="font-weight: 400;">72.54</span></td>
-                    <td class="result-data-2">2.406</td> <td class="result-data-2"><span style="font-weight: 400;">20.97</span></td>
-                    <td class="result-data-2"><span style="font-weight: 400;">1.358</span></td>
+                    <td class="result-data-2"><b>24.69</b></td> <td class="result-data-2-400">72.54</td>
+                    <td class="result-data-2">2.406</td> <td class="result-data-2-400">20.97</td> <td class="result-data-2-400">1.358</td>
                 </tr>
                 <tr class="result-row">
-                    <td class="result-data-small"><span style="font-weight: 400;">ConsistencyTTA</span></td>
+                    <td class="result-data-small">ConsistencyTTA</td>
                     <td class="result-data-2"><b>1</b></td> <td class="result-data-2"><b>2.3</b></td>
-                    <td class="result-data"><span style="font-weight: 400;">3.902</span></td> <td class="result-data">4.010</td>
+                    <td class="result-data-400">3.902</td> <td class="result-data">4.010</td>
                     <td class="result-data-2">22.50</td> <td class="result-data-2">72.30</td>
                     <td class="result-data-2">2.575</td> <td class="result-data-2">22.08</td>
                     <td class="result-data-2"><b>1.354</b></td>
                 </tr>
                 <tr class="result-row-2-small" style="color: #898989">
-                    <td class="result-data"><span style="font-weight: 400;">Ground Truth</span></td>
-                    <td class="result-data-2">-</td> <td class="result-data-2">-</td>
-                    <td class="result-data">-</td> <td class="result-data">-</td>
+                    <td class="result-data-small">Ground Truth</td> <td class="result-data-2">-</td>
+                    <td class="result-data-2">-</td> <td class="result-data">-</td> <td class="result-data">-</td>
                     <td class="result-data-2">26.71</td> <td class="result-data-2">100</td>
                     <td class="result-data-2">-</td> <td class="result-data-2">-</td> <td class="result-data-2">-</td>
                 </tr>
@@ -155,7 +152,90 @@
         <p>
             <a href="https://paperswithcode.com/sota/audio-generation-on-audiocaps" target=&ldquo;blank&rdquo;>This benchmark</a>
             demonstrates how our single-step models stack up with previous methods,
-            most of which mostly require hundreds of generation steps.
+            most of which requiring hundreds of generation steps.
+        </p>
+    </section>
+
+    <section class="section">
+        <h2>Ablation Studies on Distillation Settings</h2>
+        <p>
+            <table class="result-table">
+                <thead>
+                    <tr class="result-row">
+                        <th class="result-head">Guidance Method</th>
+                        <th class="result-head">CFG Weight</th>
+                        <th class="result-head">Teacher Solver</th>
+                        <th class="result-head">Noise Schedule</th>
+                        <th class="result-head-2">FAD ↓</th>
+                        <th class="result-head-2">FD ↓</th>
+                        <th class="result-head-2">KLD ↓</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="result-row-2">
+                        <td class="result-data-small">Unguided</td>
+                        <td class="result-data-small">1</td>
+                        <td class="result-data-small">DDIM</td>
+                        <td class="result-data-small">Uniform</td>
+                        <td class="result-data-2">13.48</td>
+                        <td class="result-data-2">45.75</td>
+                        <td class="result-data-2">2.409</td>
+                    </tr>
+                    <tr class="result-row-2">
+                        <td class="result-data-small" rowspan="2">External CFG</td>
+                        <td class="result-data-small" rowspan="2">3</td>
+                        <td class="result-data-small">DDIM</td>
+                        <td class="result-data-small">Uniform</td>
+                        <td class="result-data-2">8.565</td>
+                        <td class="result-data-2">38.67</td>
+                        <td class="result-data-2">2.015</td>
+                    </tr>
+                    <tr class="result-row-2">
+                        <td class="result-data-small">Heun</td>
+                        <td class="result-data-small">Karras</td>
+                        <td class="result-data-2">7.421</td>
+                        <td class="result-data-2">39.36</td>
+                        <td class="result-data-2">1.976</td>
+                    </tr>
+                    <tr class="result-row-2">
+                        <td class="result-data-small" rowspan="2">CFG Distillation<br>with Fixed Weight</td>
+                        <td class="result-data-small" rowspan="2">3</td>
+                        <td class="result-data-small" rowspan="2">Heun</td>
+                        <td class="result-data-small">Karras</td>
+                        <td class="result-data-2">5.702</td>
+                        <td class="result-data-2">33.18</td>
+                        <td class="result-data-2">1.494</td>
+                    </tr>
+                    <tr class="result-row-2">
+                        <td class="result-data-small">Uniform</td>
+                        <td class="result-data-2">3.859</td>
+                        <td class="result-data-2"><b>27.79</b></td>
+                        <td class="result-data-2">1.421</td>
+                    </tr>
+                    <tr class="result-row-2">
+                        <td class="result-data-small" rowspan="3">CFG Distillation<br>with Random Weight</td>
+                        <td class="result-data-small">4</td>
+                        <td class="result-data-small" rowspan="2">Heun</td>
+                        <td class="result-data-small" rowspan="2">Uniform</td>
+                        <td class="result-data-2-400">3.180</td>
+                        <td class="result-data-2-400">27.92</td>
+                        <td class="result-data-2-400">1.394</td>
+                    </tr>
+                    <tr class="result-row-2">
+                        <td class="result-data-small">6</td>
+                        <td class="result-data-2"><b>2.975</b></td>
+                        <td class="result-data-2">28.63</td>
+                        <td class="result-data-2"><b>1.378</b></td>
+                    </tr>
+                </tbody>
+            </table>            
+            Based on these results, we can conclude that:
+            <ul>
+                <li>CFG distillation with random weight is more effective than fixed weight, 
+                    which is more effective than external CFG.</li>
+                <li>Heun is a better teacher solver than DDIM, and 
+                    Uniform noise schedule outperforms Karras noise schedule.</li>
+            </ul>         
         </p>
     </section>
 
@@ -183,11 +263,11 @@
         <h2>Citing Our Work (BibTeX)</h2>
         <div id="bibtex1" class="bibtex" onclick="copyToClipboard('bibtex1')">
             <i class="far fa-copy copy-icon"></i>
-<pre>@article{bai2023accelerating,
+<pre>@inproceedings{bai2024accelerating,
   author = {Bai, Yatong and Dang, Trung and Tran, Dung and Koishida, Kazuhito and Sojoudi, Somayeh},
-  title = {Accelerating Diffusion-Based Text-to-Audio Generation with Consistency Distillation},
-  journal={arXiv preprint arXiv:2309.10740},
-  year = {2023}
+  title = {ConsistencyTTA: Accelerating Diffusion-Based Text-to-Audio Generation with Consistency Distillation},
+  booktitle = {INTERSPEECH},
+  year = {2024}
 }</pre>
         </div>
     </section>
